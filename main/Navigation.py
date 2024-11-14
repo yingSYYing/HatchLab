@@ -11,7 +11,7 @@ import streamlit as st
 
 pages = {
     "Hatch Lab": [
-        st.Page("Hello.py", title="Hello!"),
+        st.Page("1Hello.py", title="Hello!"),
     ],
     "Your business": [
         st.Page("main.pages.Profile_Form.py", title= "Information Update"),
