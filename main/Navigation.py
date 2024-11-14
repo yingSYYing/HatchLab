@@ -15,11 +15,11 @@ pages = {
     ],
     "Your business": [
         st.Page("main.pages.Profile_Form.py", title= "Information Update"),
-        st.Page("Business_profile.py", title="Business profile"),
+        st.Page("main.Business_profile.py", title="Business profile"),
     ],
     "Resources": [
-        st.Page("3Roadplan.py", title="Roadmap"),
-        st.Page("Trend_Analysis.py", title="Trend Analysis"),
+        st.Page("main.3Roadplan.py", title="Roadmap"),
+        st.Page("main.Trend_Analysis.py", title="Trend Analysis"),
     ],
 }
 
