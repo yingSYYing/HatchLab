@@ -36,7 +36,7 @@ Ready to hatch your next big idea? Let us get started🥚!
 
 
 
-st.page_link("Pages\Profile_Form.py", label="Let's Get Started!")
+st.page_link("main\pages\Profile_Form.py", label="Let's Get Started!")
 
 
 
