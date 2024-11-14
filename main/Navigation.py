@@ -14,7 +14,7 @@ pages = {
         st.Page("Hello.py", title="Hello!"),
     ],
     "Your business": [
-        st.Page("Profile_Form.py", title= "Information Update"),
+        st.Page("main.pages.Profile_Form.py", title= "Information Update"),
         st.Page("Business_profile.py", title="Business profile"),
     ],
     "Resources": [

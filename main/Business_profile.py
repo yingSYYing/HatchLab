@@ -1,5 +1,5 @@
 import streamlit as st
-import Profile_Form as pf
+import main.pages.Profile_Form as pf
 st.title("Business Profile")
 
 st.subheader("Business")
