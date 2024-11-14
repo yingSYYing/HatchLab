@@ -2,8 +2,7 @@ import os
 import re
 import time 
 from dotenv import load_dotenv
-import google.generativeai as genai
-from google.generativeai.types import HarmCategory, HarmBlockThreshold
+
 from openai import OpenAI
 import streamlit as st
 from streamlit_extras.add_vertical_space import add_vertical_space

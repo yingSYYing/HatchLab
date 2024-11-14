@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import json
 import pandas as pd
-import main.pages.Profile_Form as p
+import pages.Profile_Form as p
 from datetime import datetime
 
 # Load environment variables
