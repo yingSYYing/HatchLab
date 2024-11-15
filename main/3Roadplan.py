@@ -107,7 +107,8 @@ def genModel(products, industry, audience):
                 
                                         
                 Generate the business model in that table format above thank you. 
-                                        
+                Note: if any variables are N/A, then you just instead generate this line of text:
+                    "Not enough information available"                        
             """
 
     businessModel = client.chat.completions.create(
