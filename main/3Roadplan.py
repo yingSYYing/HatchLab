@@ -16,6 +16,25 @@ load_dotenv()
 client = OpenAI(api_key=st.secrets['OPENAI_API_KEY'])
 
 
+def defaultValue():
+    if 'business_type' not in st.session_state:
+            st.session_state.business_type = "N/A"
+    if 'product' not in st.session_state:
+            st.session_state.product = "N/A"
+    if 'industry_option' not in st.session_state:
+            st.session_state.industry_option = "N/A"
+    if 'location' not in st.session_state:
+            st.session_state.location = "N/A"
+    if 'demographics' not in st.session_state:
+            st.session_state.demographics = "N/A"
+    if 'target_date' not in st.session_state:
+            st.session_state.target_date = "N/A"
+    if 'strength_bus' not in st.session_state:
+            st.session_state.strength_bus = "N/A"
+    if 'finance' not in st.session_state:
+            st.session_state.finance = "N/A"
+    if 'initial_funds' not in st.session_state:
+            st.session_state.initial_funds = 0
 
 def loadingBar():
     
@@ -260,11 +279,15 @@ def Opportunities(products, industry, strength, audience, country):
 TabA, TabB, TabC = st.tabs(["Timeline", "Business Model", "Opportunities"])
 
 with TabA: 
-    generated_goals = goals(timestamp, products, industry, startup_fund, investors, strength, audience)
-        
-    st.write(generated_goals)
-        
-    milestones = generated_goals.split("\n\n")
+    if not defaultValue():
+    
+        generated_goals = goals(timestamp, products, industry, startup_fund, investors, strength, audience)
+            
+        st.write(generated_goals)
+            
+        milestones = generated_goals.split("\n\n")
+    else: 
+        st.write("No information available")
     # if st.button("Generate Timeline"):
     #     generated_goals = goals(timestamp, products, industry, startup_fund, investors, strength, audience)
         
@@ -299,6 +322,7 @@ with TabA:
     #     #[3] = actions 
 
 with TabB:
+    defaultValue()
     progress_text = "Generating... Please wait."
     my_bar = st.progress(0, text=progress_text)
 
@@ -345,6 +369,7 @@ with TabB:
     #         st.write(categories[6])
 
 with TabC: 
+        defaultValue()
         opps = Opportunities(products, industry, strength, audience, country)
         # loadingBar()
         progress_text = "Operation in progress. Please wait."
