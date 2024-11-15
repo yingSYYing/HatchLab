@@ -294,6 +294,5 @@ target_date = "10 months"
 finance = 'looking for an investor'
 initial_funds = "20000" 
 
-trend_analysis = Trend(p.industry_option, p.business_type, p.location, p.product, p.strength_bus, 
-                       p.demographics, p.target_date, p.finance, p.intiial_funds)
-
+trend_analysis = Trend(st.session_state.industry_option, st.session_state.business_type, st.session_state.location, product, st.session_state.strength_bus, 
+                       st.session_state.demographics, st.session_state.target_date, st.session_state.finance, st.session_state.initial_funds)
