@@ -132,11 +132,11 @@ with st.form("my_form"):
 
     #How much capital they have right now
     st.header("Initial Funds")
-    intiial_funds = st.number_input(
+    initial_funds = st.number_input(
         "What is your budget to start the business", value=None, placeholder="Type a number...", 
         key = 'fund_key'
     )
-    st.write("The current number is ", intiial_funds)
+    st.write("The current number is ", initial_funds)
 
     if st.form_submit_button('Submit my picks'):
         st.session_state.business_type = business_type
