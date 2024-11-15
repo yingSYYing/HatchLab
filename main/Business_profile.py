@@ -27,4 +27,4 @@ st.subheader("Finance")
 st.write(st.session_state.finance)
 
 st.subheader("Initial Funds")
-st.write(st.session_state.intiial_funds)
+st.write(st.session_state.initial_funds)
