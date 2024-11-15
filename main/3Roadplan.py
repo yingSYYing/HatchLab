@@ -56,15 +56,15 @@ def loadingBar():
 # investors = True
 # startup_fund = 50000 
 # country = "Norway"
-
-products = st.session_state.product
-industry = st.session_state.industry_option
-audience = st.session_state.demographics
-timestamp = st.session_state.target_date
-strength = st.session_state.strength_bus
-investors = st.session_state.finance
-startup_fund = st.session_state.initial_funds
-country = st.session_state.location
+if not defaultValue():
+    products = st.session_state.product
+    industry = st.session_state.industry_option
+    audience = st.session_state.demographics
+    timestamp = st.session_state.target_date
+    strength = st.session_state.strength_bus
+    investors = st.session_state.finance
+    startup_fund = st.session_state.initial_funds
+    country = st.session_state.location
 
 # needed: products, industry, target audience
 def genModel(products, industry, audience):
