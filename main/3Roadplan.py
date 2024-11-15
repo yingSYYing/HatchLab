@@ -56,15 +56,15 @@ def loadingBar():
 # investors = True
 # startup_fund = 50000 
 # country = "Norway"
-if not defaultValue():
-    products = st.session_state.product
-    industry = st.session_state.industry_option
-    audience = st.session_state.demographics
-    timestamp = st.session_state.target_date
-    strength = st.session_state.strength_bus
-    investors = st.session_state.finance
-    startup_fund = st.session_state.initial_funds
-    country = st.session_state.location
+
+products = st.session_state.product
+industry = st.session_state.industry_option
+audience = st.session_state.demographics
+timestamp = st.session_state.target_date
+strength = st.session_state.strength_bus
+investors = st.session_state.finance
+startup_fund = st.session_state.initial_funds
+country = st.session_state.location
 
 # needed: products, industry, target audience
 def genModel(products, industry, audience):
@@ -279,15 +279,14 @@ def Opportunities(products, industry, strength, audience, country):
 TabA, TabB, TabC = st.tabs(["Timeline", "Business Model", "Opportunities"])
 
 with TabA: 
-    if not defaultValue():
     
-        generated_goals = goals(timestamp, products, industry, startup_fund, investors, strength, audience)
+    
+    generated_goals = goals(timestamp, products, industry, startup_fund, investors, strength, audience)
             
-        st.write(generated_goals)
+    st.write(generated_goals)
             
-        milestones = generated_goals.split("\n\n")
-    else: 
-        st.write("No information available")
+    milestones = generated_goals.split("\n\n")
+    
     # if st.button("Generate Timeline"):
     #     generated_goals = goals(timestamp, products, industry, startup_fund, investors, strength, audience)
         
