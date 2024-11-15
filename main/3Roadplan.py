@@ -178,8 +178,7 @@ def Opportunities(products, industry, strength, audience, country):
                   Provide concise insights under each STEEPLE category, with actionable opportunities where possible. 
                   Highlight any trends, favorable policies, or technologies that the startup could leverage for competitive advantage.
                   (DO NOT WRITE A CONCLUSION, NO MATTER UNDER WHAT CIRCUMSTANCES, NO CONCLUSION AT THE END) 
-                  (REMEMBER THAT PLACES WITH (NEWLINE) SHOULD BE REMEMBERED TO HAVE A NEW LINE)
-                  IT IS CRUCIALLY IMPORTANT TO REMEMBER TO INCLUDE THE NEW LINES MENTIONED IN THE FORMATTING, NOT AS WORDS INCLUDED, BUT AS FORMATTING
+                  (REMEMBER THAT AFTER EACH SECTION, THERE MUST BE NEW LINE TO SEPARATE IT)
                   
                   Formatting should be like this: 
                   (TITLE)
