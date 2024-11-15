@@ -5,12 +5,25 @@ from openai import OpenAI
 
 import streamlit as st
 
+def form_callback():
+    st.write(st.session_state.location_key)
+    st.write(st.session_state.product_key)
+    st.write(st.session_state.business_key)
+    st.write(st.session_state.finance_key)
+    st.write(st.session_state.industry_key)
+    st.write(st.session_state.date_key)
+    st.write(st.session_state.strength_key)
+    st.write(st.session_state.audience_key)
+    st.write(st.session_state.fund_key)
+
+
 with st.form("my_form"):
     #Kind of business
     st.header("Business Structure")
     business_type = st.selectbox(
         "What kind of business will you be operating?",
-        ("Soletrader", "Partnership", "Limited Partnership", "Medium-sized enterprise", "Large-scale enterprise", "Social enterprise"),
+        ("Soletrader", "Partnership", "Limited Partnership", "Medium-sized enterprise", "Large-scale enterprise", "Social enterprise"), 
+        key = 'business_key'
     )
 
     st.write("You selected:", business_type)
@@ -18,7 +31,7 @@ with st.form("my_form"):
 
    #Products sold by the business
     st.header("Products")
-    product = st.text_input("What products are you selling?")
+    product = st.text_input("What products are you selling?", key = 'product_key')
     st.divider()
 
 
@@ -34,6 +47,7 @@ with st.form("my_form"):
         "Telecommunications", "Legal & Professional Services", "Government & Public Sector", 
         "Pharmaceuticals & Biotechnology", "Aerospace & Defense", "Environmental Services & Sustainability",
         "Arts & Culture"),
+        key = 'industry_key'
     )
 
     st.write("You selected:", industry_option)
@@ -46,7 +60,8 @@ with st.form("my_form"):
         ("Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", 
         "Pahang", "Perak", "Perlis", "Pulau Pinang", "Sabah", "Sarawak", 
         "Selangor", "Terengganu", "Wilayah Persekutuan Kuala Lumpur", 
-        "Wilayah Persekutuan Labuan", "Wilayah Persekutuan Putrajaya"),
+        "Wilayah Persekutuan Labuan", "Wilayah Persekutuan Putrajaya"), 
+        key = 'location_key'
     )
 
     st.write("You selected:", location)
@@ -70,7 +85,8 @@ with st.form("my_form"):
         "Light Users", "Quality Seekers", "Convenience Seekers", "Price-Conscious Shoppers", "Small Businesses", 
         "Large Corporations", "Startups", "Patients", "Healthcare Providers", "Students", "Schools/Institutions", 
         "Homebuyers", "Renters", "Real Estate Investors", "Early Adopters", "Mass Market", "Pet Owners", "Vegan/Vegetarian Consumers", 
-        "Luxury Consumers", "Adventure Travelers","Disabled"),
+        "Luxury Consumers", "Adventure Travelers","Disabled"), 
+        key = 'audience_key'
     )
 
     st.write("You selected:", demographics)
@@ -89,14 +105,14 @@ with st.form("my_form"):
             "2 years","3 years","4 years",
             "5 years","6 years","7 years",
             "8 years", "9 years","10 years",
-        ],
+        ], key = 'date_key'
     )
     st.write("You selected ", target_date, "as your target date.")
     st.divider()
 
     #Strengths of the business
     st.header("Strengths")
-    strength_bus = st.text_input("What are your strengths as a business?")
+    strength_bus = st.text_input("What are your strengths as a business?", key = 'strength_key')
     st.divider()
 
     #Whether they have finance or not
@@ -108,13 +124,16 @@ with st.form("my_form"):
             "I have my own funds or can get the money myself without help.",
             "I am looking for investors or ways to finance my business",
         ],
+        key = 'finance_key'
     )
     st.divider()
 
     #How much capital they have right now
     st.header("Initial Funds")
     intiial_funds = st.number_input(
-        "What is your budget to start the business", value=None, placeholder="Type a number..."
+        "What is your budget to start the business", value=None, placeholder="Type a number...", 
+        key = 'fund_key'
     )
     st.write("The current number is ", intiial_funds)
-    st.form_submit_button('Submit my picks')
+    st.form_submit_button('Submit my picks', on_click=form_callback)
+
