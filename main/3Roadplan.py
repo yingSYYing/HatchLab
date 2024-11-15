@@ -179,7 +179,7 @@ def Opportunities(products, industry, strength, audience, country):
                   Highlight any trends, favorable policies, or technologies that the startup could leverage for competitive advantage.
                   (DO NOT WRITE A CONCLUSION, NO MATTER UNDER WHAT CIRCUMSTANCES, NO CONCLUSION AT THE END) 
                   (REMEMBER THAT PLACES WITH (NEWLINE) SHOULD BE REMEMBERED TO HAVE A NEW LINE)
-                  IT IS CRUCIALLY IMPORTANT TO REMEMBER TO INCLUDE THE NEW LINES MENTIONED IN THE FORMATTING
+                  IT IS CRUCIALLY IMPORTANT TO REMEMBER TO INCLUDE THE NEW LINES MENTIONED IN THE FORMATTING, NOT AS WORDS INCLUDED, BUT AS FORMATTING
                   
                   Formatting should be like this: 
                   (TITLE)
@@ -189,7 +189,6 @@ def Opportunities(products, industry, strength, audience, country):
                   
                   (bullet points) Risks:
                                   (2 bullet points) (content)
-                                  
                                  (NEWLINE) 
                                  
                   (Heading) TECHNOLOGICAL: 
@@ -197,8 +196,7 @@ def Opportunities(products, industry, strength, audience, country):
                                   (2 bullet points) (content)
                   
                   (bullet points) Risks:
-                                  (2 bullet points) (content)
-                                  
+                                  (2 bullet points) (content)                                 
                                (NEWLINE)  
                                 
                   (Heading) ECONOMICAL: 
@@ -206,8 +204,7 @@ def Opportunities(products, industry, strength, audience, country):
                                   (2 bullet points) (content)
                   
                   (bullet points) Risks:
-                                  (2 bullet points) (content)
-                                  
+                                  (2 bullet points) (content)                             
                                  (NEWLINE) 
                                  
                   (Heading) ENVIRONMENTAL: 
@@ -215,8 +212,7 @@ def Opportunities(products, industry, strength, audience, country):
                                   (2 bullet points) (content)
                   
                   (bullet points) Risks:
-                                  (2 bullet points) (content)
-                                  
+                                  (2 bullet points) (content)                              
                                  (NEWLINE) 
                                  
                   (Heading) POLITICAL: 
@@ -224,8 +220,7 @@ def Opportunities(products, industry, strength, audience, country):
                                   (2 bullet points) (content)
                   
                   (bullet points) Risks:
-                                  (2 bullet points) (content)
-                                  
+                                  (2 bullet points) (content)                               
                                  (NEWLINE) 
                                  
                   (Heading) LEGAL: 
@@ -233,8 +228,7 @@ def Opportunities(products, industry, strength, audience, country):
                                   (2 bullet points) (content)
                   
                   (bullet points) Risks:
-                                  (2 bullet points) (content)
-                                  
+                                  (2 bullet points) (content)                      
                                  (NEWLINE) 
                                  
                   (Heading) ETHICAL: 
