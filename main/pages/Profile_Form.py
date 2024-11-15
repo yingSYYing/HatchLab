@@ -6,15 +6,16 @@ from openai import OpenAI
 import streamlit as st
 
 def form_callback():
-    st.write(st.session_state.location_key)
-    st.write(st.session_state.product_key)
-    st.write(st.session_state.business_key)
-    st.write(st.session_state.finance_key)
-    st.write(st.session_state.industry_key)
-    st.write(st.session_state.date_key)
-    st.write(st.session_state.strength_key)
-    st.write(st.session_state.audience_key)
-    st.write(st.session_state.fund_key)
+    
+    new_location = st.session_state.location_key
+    new_product = st.session_state.product_key
+    # st.write(st.session_state.business_key)
+    # st.write(st.session_state.finance_key)
+    # st.write(st.session_state.industry_key)
+    # st.write(st.session_state.date_key)
+    # st.write(st.session_state.strength_key)
+    # st.write(st.session_state.audience_key)
+    # st.write(st.session_state.fund_key)
 
 
 with st.form("my_form"):
@@ -135,5 +136,7 @@ with st.form("my_form"):
         key = 'fund_key'
     )
     st.write("The current number is ", intiial_funds)
-    st.form_submit_button('Submit my picks', on_click=form_callback)
+    
+    if st.form_submit_button('Submit my picks', on_click=form_callback):
+        updated_location = form_callback.new_location
 
