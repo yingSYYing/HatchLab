@@ -15,7 +15,7 @@ st.set_page_config(
 )
 
 
-#logo = st.image("Pages\chick.png", width=100)
+logo = st.image("main\chick.png", width=100)
 
 st.title("Hello, Hatchling!")
 st.subheader("    Welcome to Hatch Lab Where Startups Learn to Thrive!")
