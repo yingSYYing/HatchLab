@@ -12,7 +12,7 @@ st.subheader("Products")
 st.write(st.session_state.product)
 
 st.subheader("Location")
-st.write(st.session_state.updated_location)
+st.write(st.session_state.location)
 
 st.subheader("Demographics")
 st.write(st.session_state.demographics)
