@@ -5,17 +5,18 @@ from openai import OpenAI
 
 import streamlit as st
 
-def form_callback():
+# def form_callback():
     
-    st.session_state.updated_location = st.session_state.location_key
-    # new_product = st.session_state.product_key
-    # st.write(st.session_state.business_key)
-    # st.write(st.session_state.finance_key)
-    # st.write(st.session_state.industry_key)
-    # st.write(st.session_state.date_key)
-    # st.write(st.session_state.strength_key)
-    # st.write(st.session_state.audience_key)
-    # st.write(st.session_state.fund_key)
+#     st.session_state.updated_location = st.session_state.location_key
+    
+#     # new_product = st.session_state.product_key
+#     # st.write(st.session_state.business_key)
+#     # st.write(st.session_state.finance_key)
+#     # st.write(st.session_state.industry_key)
+#     # st.write(st.session_state.date_key)
+#     # st.write(st.session_state.strength_key)
+#     # st.write(st.session_state.audience_key)
+#     # st.write(st.session_state.fund_key)
 
 
 with st.form("my_form"):
@@ -136,7 +137,17 @@ with st.form("my_form"):
         key = 'fund_key'
     )
     st.write("The current number is ", intiial_funds)
-    
-    st.form_submit_button('Submit my picks', on_click=form_callback)
+
+    if st.form_submit_button('Submit my picks'):
+        st.session_state.business_type = business_type
+        st.session_state.product = product
+        st.session_state.industry_option = industry_option
+        st.session_state.location = location
+        st.session_state.demographics = demographics
+        st.session_state.target_date = target_date
+        st.session_state.strength_bus = strength_bus
+        st.session_state.finance = finance
+        st.session_state.initial_funds = initial_funds
+        st.success("Form submitted successfully!")
         
 
