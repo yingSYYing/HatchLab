@@ -149,5 +149,24 @@ with st.form("my_form"):
         st.session_state.finance = finance
         st.session_state.initial_funds = initial_funds
         st.success("Form submitted successfully!")
-        
+
+    if 'business_type' not in st.session_state:
+        st.session_state.business_type = ""
+    if 'product' not in st.session_state:
+        st.session_state.product = ""
+    if 'industry_option' not in st.session_state:
+        st.session_state.industry_option = ""
+    if 'location' not in st.session_state:
+        st.session_state.location = ""
+    if 'demographics' not in st.session_state:
+        st.session_state.demographics = ""
+    if 'target_date' not in st.session_state:
+        st.session_state.target_date = ""
+    if 'strength_bus' not in st.session_state:
+        st.session_state.strength_bus = ""
+    if 'finance' not in st.session_state:
+        st.session_state.finance = ""
+    if 'initial_funds' not in st.session_state:
+        st.session_state.initial_funds = 0
+
 
