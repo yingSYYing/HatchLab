@@ -56,15 +56,15 @@ def loadingBar():
 # investors = True
 # startup_fund = 50000 
 # country = "Norway"
-
-products = st.session_state.product
-industry = st.session_state.industry_option
-audience = st.session_state.demographics
-timestamp = st.session_state.target_date
-strength = st.session_state.strength_bus
-investors = st.session_state.finance
-startup_fund = st.session_state.initial_funds
-country = st.session_state.location
+def defining():
+    products = st.session_state.product
+    industry = st.session_state.industry_option
+    audience = st.session_state.demographics
+    timestamp = st.session_state.target_date
+    strength = st.session_state.strength_bus
+    investors = st.session_state.finance
+    startup_fund = st.session_state.initial_funds
+    country = st.session_state.location
 
 # needed: products, industry, target audience
 def genModel(products, industry, audience):
@@ -280,8 +280,8 @@ def Opportunities(products, industry, strength, audience, country):
 TabA, TabB, TabC = st.tabs(["Timeline", "Business Model", "Opportunities"])
 
 with TabA: 
-    
-    
+    defaultValue()
+    defining()
     generated_goals = goals(timestamp, products, industry, startup_fund, investors, strength, audience)
             
     st.write(generated_goals)
@@ -323,6 +323,7 @@ with TabA:
 
 with TabB:
     defaultValue()
+    defining()
     progress_text = "Generating... Please wait."
     my_bar = st.progress(0, text=progress_text)
 
@@ -370,6 +371,7 @@ with TabB:
 
 with TabC: 
         defaultValue()
+        defining()
         opps = Opportunities(products, industry, strength, audience, country)
         # loadingBar()
         progress_text = "Operation in progress. Please wait."
