@@ -2,6 +2,8 @@ import os
 import re
 import time 
 from dotenv import load_dotenv
+import pages.Profile_Form as p
+
 
 from openai import OpenAI
 import streamlit as st
@@ -35,16 +37,23 @@ def loadingBar():
 # Networking Suggestion
 
 #examples
-products = ["Furniture", "Woodworking", "Antiques"]
-industry = "Furniture"
-audience = "Adults"
-timestamp = "6 months"
-strength = "High durability and quality, eco-friendly"
-investors = True
-startup_fund = 50000 
-country = "Norway"
+# products = ["Furniture", "Woodworking", "Antiques"]
+# industry = "Furniture"
+# audience = "Adults"
+# timestamp = "6 months"
+# strength = "High durability and quality, eco-friendly"
+# investors = True
+# startup_fund = 50000 
+# country = "Norway"
 
-
+products = p.product
+industry = p.industry_option
+audience = p.demographics
+timestamp = p.target_date
+strength = p.strength_bus
+investors = p.finance
+startup_fund = p.intiial_funds
+country = p.location
 
 # needed: products, industry, target audience
 def genModel(products, industry, audience):
@@ -107,7 +116,7 @@ def goals(timestamp, products, industry, startup_fund, investors, strength, audi
                 The products/business they sell/develop: {products}
                 The industry they are in: {industry}
                 Whether or not they have a startup_fund or investors. If they have a startup_fund, it's {startup_fund}. 
-                If they have investors: {investors}
+                If they have investors or are self-funded: {investors}
                 The strength of their product: {strength}
                 And their target audience: {audience}
                 
