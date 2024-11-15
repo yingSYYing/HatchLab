@@ -7,8 +7,8 @@ import streamlit as st
 
 def form_callback():
     
-    new_location = st.session_state.location_key
-    new_product = st.session_state.product_key
+    st.session_state.updated_location = st.session_state.location_key
+    # new_product = st.session_state.product_key
     # st.write(st.session_state.business_key)
     # st.write(st.session_state.finance_key)
     # st.write(st.session_state.industry_key)
@@ -137,6 +137,6 @@ with st.form("my_form"):
     )
     st.write("The current number is ", intiial_funds)
     
-    if st.form_submit_button('Submit my picks', on_click=form_callback):
-        updated_location = form_callback.new_location
+    st.form_submit_button('Submit my picks', on_click=form_callback)
+        
 
