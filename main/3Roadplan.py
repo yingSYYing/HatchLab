@@ -26,15 +26,7 @@ def loadingBar():
     time.sleep(1)
     my_bar.empty()
 
-# inputted: industry, startup country, products, strength, target audience, timestamp, investor and fund availability
 
-# Generated: Roadplan:
-# Shortterm: according to timestamp
-# Long term: 
-# Business model: 
-# Opps
-# Marketing STrats
-# Networking Suggestion
 
 #examples
 # products = ["Furniture", "Woodworking", "Antiques"]
@@ -46,14 +38,14 @@ def loadingBar():
 # startup_fund = 50000 
 # country = "Norway"
 
-products = p.product
-industry = p.industry_option
-audience = p.demographics
-timestamp = p.target_date
-strength = p.strength_bus
-investors = p.finance
-startup_fund = p.intiial_funds
-country = p.location
+products = st.session_state.product
+industry = st.session_state.industry_option
+audience = st.session_state.demographics
+timestamp = st.session_state.target_date
+strength = st.session_state.strength_bus
+investors = st.session_state.finance
+startup_fund = st.session_state.intiial_funds
+country = st.session_state.location
 
 # needed: products, industry, target audience
 def genModel(products, industry, audience):
