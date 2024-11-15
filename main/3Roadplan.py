@@ -44,7 +44,7 @@ audience = st.session_state.demographics
 timestamp = st.session_state.target_date
 strength = st.session_state.strength_bus
 investors = st.session_state.finance
-startup_fund = st.session_state.intiial_funds
+startup_fund = st.session_state.initial_funds
 country = st.session_state.location
 
 # needed: products, industry, target audience
